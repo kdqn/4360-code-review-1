@@ -1,8 +1,8 @@
 import os
 from message import Message
 from interface import UserInterface
-from user import User
-from account import Account
+# from user import User
+# from account import Account
 from auth import Auth
 
 
@@ -21,10 +21,10 @@ def main():
         message.print("Welcome to the bank of Py!")
         message.print("please login to continue.")
 
-        userName = input("Username: ")
-        password = input("password")
+        username = input("Username: ")
+        password = input("Password: ")
 
-        user = auth.login(userName, password)
+        user = auth.login(username, password)
         if not user:
             login_attempts += 1
             failedAttempt = True
